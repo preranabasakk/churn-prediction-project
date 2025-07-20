@@ -1,43 +1,46 @@
-# 📊 Customer Churn Prediction
 
-This project focuses on predicting customer churn using machine learning. It includes data preprocessing, model training, evaluation, and deployment via a Streamlit web application. The goal is to help telecom or subscription-based companies proactively identify customers likely to leave.
+---
 
-## 🚀 Project Overview
+## 🧠 Model Details
 
-- **Objective**: Predict whether a customer will churn based on demographic and service-related features.
-- **Tech Stack**: 
-  - Python (Pandas, Scikit-learn)
-  - Jupyter Notebook
-  - Streamlit
-  - Git/GitHub
-
-## 🧠 Machine Learning Model
-
-- **Model Used**: Logistic Regression (or any other if you used something else)
-- **Training Data**: Cleaned and preprocessed telecom dataset.
+- **Model Used**: Logistic Regression (you can change this to the actual model)
 - **Target Variable**: `Churn` (Yes/No)
+- **Type**: Binary classification
+- **Evaluation Metrics**: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
 
-## 📁 Project Structure
+---
 
-│
-├── churn_model.pkl # Trained model
-├── sample_input_encoded.csv # Sample encoded input data for predictions
-├── churn_prediction_app.py # Streamlit web app
-├── model_training.ipynb # Jupyter Notebook for training and evaluation
-├── sample_input_generator.ipynb # Notebook to generate encoded CSV sample
-├── requirements.txt # List of required Python packages
-└── README.md # Project documentation
+## 🧪 Steps Performed
 
-## 📈 Model Performance
-Accuracy: ~85% (example value)
+1. **Data Cleaning**
+   - Handled missing values
+   - Converted categorical variables using encoding
+2. **Exploratory Data Analysis (EDA)**
+   - Correlation heatmap
+   - Distribution plots
+3. **Feature Engineering**
+   - Encoding categorical variables
+   - Scaling numerical features (if used)
+4. **Model Building**
+   - Train-test split
+   - Model fitting and evaluation
+5. **Saving the Model**
+   - Serialized using `joblib` for future use
 
-Evaluation Metrics: Confusion matrix, precision, recall, F1-score
+---
 
-## 📌 Features Used
-Demographics: Gender, SeniorCitizen, Partner, Dependents
-Services: InternetService, StreamingTV, etc.
-Account Info: Contract type, MonthlyCharges, TotalCharges, etc.
+## 🧾 Sample Input Format
 
-## 💡 Future Improvements
-Use advanced models like XGBoost or RandomForest
-Feature engineering and hyperparameter tuning
+['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+'MonthlyCharges', 'TotalCharges']
+
+## 📌 Future Scope
+
+Deploy the model using Streamlit or Flask
+Add interactive web interface
+Use ensemble models (e.g., RandomForest, XGBoost)
+Model explainability using SHAP or LIME
+
